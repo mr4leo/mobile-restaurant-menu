@@ -1,0 +1,269 @@
+/* =========================
+  Global
+  ========================= */
+* {
+  /* Global reset for all elements */
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Arial', sans-serif;
+}
+
+/* =========================
+  Hero Section
+  ========================= */
+.hero-bg {
+  display: flex;
+  align-items: center;
+  background-color: #FCBC00;
+  height: 20vh;
+  overflow: hidden;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 4rem;
+  width: 100%;
+  background: linear-gradient(90deg, #FFD86A 0%, #FF9A00 100%);
+  overflow: hidden;
+}
+
+.hero h1 {
+  font-size: 3rem;
+}
+
+.hero-image {
+  position: relative;
+  left: 12rem;
+  width: 24rem;
+  filter: drop-shadow(0rem 4rem 4rem rgba(0, 0, 0, 0.25));
+}
+
+/* =========================
+  Menu Section
+  ========================= */
+/* Menu section container */
+.menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 4rem;
+  width: 100%;
+  background-color: #FFF5E5;
+}
+
+/* Individual menu item container */
+.menu-item {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  padding: 3rem 0;
+  border-bottom: solid .25px rgb(178, 172, 150);
+}
+
+/* Left side of menu item (image + details) */
+.left-side {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+}
+
+.food-img-container {
+  width: 8rem;
+  height: 8rem;
+  padding: 1rem;
+  background-color: #FCBC00;
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.food-img {
+  width: 6rem;
+  height: 6rem;
+  filter: drop-shadow(0rem 2rem .75rem rgba(0, 0, 0, 0.3));
+}
+
+.food-info {
+  display: flex;
+  flex-direction: column;
+  gap: .25rem;
+  width: 50%;
+}
+
+/* Menu item price */
+.menu-price {
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+/* Add to cart button */
+.plus-button {
+  display: grid;
+  place-items: center;
+  min-width: 3rem;
+  min-height: 3rem;
+  font-size: 1.25rem;
+  font-weight: bold;
+  background-color: #82C022;
+  border-radius: 100%;
+  border: none;
+  filter: drop-shadow(0rem .5rem .5rem rgba(0, 0, 0, 0.15));
+}
+
+/* =========================
+  Order Section
+  ========================= */
+/* Order section container */
+.ordered-items {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 4rem 4rem 0rem 4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+.order-total {
+  padding: 0 4rem 4rem 4rem;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Order section heading */
+.order h2 {
+  margin-bottom: 2rem;
+}
+
+/* Order item container */
+.order-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Left side of order item */
+.order-item-left-side {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  width: 7rem;
+  /* border: solid 2px rgb(0, 0, 0); */
+}
+
+.total {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  font-weight: bold;
+}
+
+/* Order item price */
+.item-price {
+  font-weight: normal;
+}
+
+/* Divider line */
+.divider {
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: solid 2px black;
+}
+
+/* Small circular x icon */
+.x-icon {
+  display: grid;
+  place-items: center;
+  min-width: 1rem;
+  min-height: 1rem;
+  font-size: .6rem;
+  font-weight: bold;
+  background-color: #ff904b;
+  border-radius: 100%;
+  border: none;
+  filter: drop-shadow(0rem .5rem .5rem rgba(0, 0, 0, 0.15));
+}
+
+/* Complete order button */
+.submit {
+  display: grid;
+  width: 100%;
+  padding: 1rem;
+  margin-top: 2rem;
+  font-size: 1rem;
+  font-weight: bold;
+  color: black;
+  background-color: #82C022;
+  border: none;
+  border-radius: 2rem;
+  filter: drop-shadow(0rem .5rem .5rem rgba(0, 0, 0, 0.15));
+}
+
+#complete-order {
+  display: none;
+}
+
+.payment-modal {
+  display: none;
+  /* display: grid; */
+  place-items: center;
+  background-color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  filter: drop-shadow(0rem .5rem .5rem rgba(0, 0, 0, 0.15));
+  transition: all .3s ease-in-out;
+}
+
+.payment-modal fieldset {
+  margin-top: 1rem;
+  border: none;
+}
+
+.payment-modal legend {
+  position: relative;
+  font-size: .6rem;
+  font-weight: bold;
+  padding: .25rem .25rem 0 .25rem;
+  left: .5rem;
+  top: .5rem;
+  background-color: white;
+  width: fit-content;
+ }
+
+.payment-modal label {
+  display: none;
+ }
+
+.payment-modal input {
+  padding: .75rem .5rem;
+  width: 100%;
+  margin-bottom: .25rem;
+  border-radius: .25rem;
+  border: solid .5px rgb(181, 181, 181);
+ }
+
+ .confirmation-message {
+  display: none;
+  /* display: grid; */
+  place-items: center;
+  background-color:#e5f0d4;
+  padding: 2rem 4rem;
+ }
+
+ .green-text {
+  color: #5d9b00;
+ }

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- Hero -->
+    <section class="hero-bg">
+        <div class="hero">
+            <div class="hero-text">
+                <h1>Lupita's Diner</h1>
+                <p class="hero-body">The best burgers in South Africa.</p>
+            </div>
+            <img class="hero-image" src="Images/Burger.png" alt="burger" />
+        </div>
+    </section>
+
+    <!-- Menu -->
+    <main class="menu">
+        <!-- <div class="menu-item">
+            <div class="left-side">
+                <div class="food-img-container">
+                    <img class="food-img" src="Images/Pizza.png" alt="" />
+                </div>
+                <div class="food-info">
+                    <h3>Pizza Slice</h3>
+                    <p class="menu-description">Delicious cheese pizza with a crispy crust.</p>
+                    <p class="menu-price">2.50</p>
+                </div>
+            </div>
+            <button class="plus-button">+</button>
+        </div> -->
+    </main>
+
+    <!-- Order -->
+    <section class="order">
+
+    <div class="ordered-items">
+        <h2 id="your-order-title">Your Order</h2>
+
+        <!-- <div class="order-item">
+            <div class="order-item-left-side">
+                <p class="item-name">Pizza Slice</p>
+                <button class="x-icon">x</button>
+            </div>
+            <p class="item-price">$2.50</p>
+        </div> -->
+    </div>
+
+    <div class="order-total">
+        <div class="divider"></div>
+
+        <div class="total">
+            <!-- <p class="item-name">Total</p>
+            <p>$2.50</p> -->
+        </div>
+
+        <button class="submit" id='complete-order'>Complete Order</button>
+    </div>
+
+    </section>
+
+        <div class="payment-modal">
+    <div>
+        <h1>Enter Card Details</h1>
+
+        <form action="/submit-payment" method="POST">
+         <fieldset>
+            <legend>Name On Card</legend>
+            <label for="name-on-card">Name on Card:</label>
+            <input type="text" id="name-on-card" name="name-on-card" placeholder="Type name here" required/>
+
+            <legend>Card Number</legend>
+            <label for="card-number">Card Number:</label>
+            <input type="text" id="card-number" name="card-number" placeholder="Type card number here" required/>
+
+            <legend>CVV</legend>
+            <label for="cvv">CVV:</label>
+            <input type="text" id="cvv" name="cvv" placeholder="Type CVV here" required/>
+        </fieldset>
+
+            <button class="submit" type="submit" id="pay-btn">Pay</button>
+        
+        </form>
+    </div>
+    </div>
+
+    <div class="confirmation-message">
+        <!-- <h2>Thanks <span class="green-text">${inputName},</span> your order is on the way!</h2> -->
+    </div>
+
+</body>
+<script type="module" src="./script.js"></script>
+</html>
