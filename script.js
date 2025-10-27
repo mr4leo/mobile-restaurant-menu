@@ -5,9 +5,9 @@ const menuEl = document.querySelector('.menu')
 const orderItemEl = document.querySelector('.ordered-items')
 const totalEl = document.querySelector('.total')
 const paymentModalEl = document.querySelector('.payment-modal')
-const orderTotalEl = document.querySelector('.order-total')
 const yourOrderTitleEl = document.querySelector('#your-order-title')
 const completeOrderBtnEl = document.querySelector('#complete-order')
+const orderAgainBtnEl = document.querySelector('#order-again')
 const confirmationMessageEl = document.querySelector('.confirmation-message')
 const inputNameEl = document.getElementById('name-on-card')
 let receiptArr = []
@@ -29,6 +29,9 @@ document.addEventListener('click', function(e){
     else if (e.target.id === 'complete-order' && orderCompleted === false){
         paymentModalEl.style.display = 'grid'
     }
+    else if (e.target.id === 'order-again'){
+        window.location.reload()
+    }
 })
 
 document.querySelector('form').addEventListener('submit', function(e){
@@ -37,9 +40,10 @@ document.querySelector('form').addEventListener('submit', function(e){
         confirmationMessageEl.innerHTML =`
         <h2>Thanks <span class="green-text">${inputNameEl.value}</span>, your order is on the way!</h2>`
         paymentModalEl.style.display = 'none'
-        // orderTotalEl.style.display = 'none'
-        // yourOrderTitleEl.style.display = 'none'
+        completeOrderBtnEl.style.display = 'none'
+        orderAgainBtnEl.style.display = 'grid'
         confirmationMessageEl.style.display = 'grid'
+
         confirmationMessageEl.scrollIntoView({
             behavior: 'smooth'
         })

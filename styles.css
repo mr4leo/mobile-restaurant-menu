@@ -213,6 +213,11 @@
   display: none;
 }
 
+#order-again {
+  display: none;
+  color: white;
+}
+
 .payment-modal {
   display: none;
   /* display: grid; */
