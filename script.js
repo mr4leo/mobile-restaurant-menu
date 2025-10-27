@@ -17,6 +17,9 @@ let orderCompleted = false
 document.addEventListener('click', function(e){
     if (e.target.classList.contains('plus-button') && orderCompleted === false){
         completeOrderBtnEl.style.display = 'grid'
+        yourOrderTitleEl.scrollIntoView({
+            behavior: 'smooth'
+        })
     addToOrder(e.target.id)
     }
 
