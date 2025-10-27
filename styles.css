@@ -9,6 +9,7 @@
   font-family: 'Arial', sans-serif;
 }
 
+
 /* =========================
   Hero Section
   ========================= */
@@ -267,3 +268,16 @@
  .green-text {
   color: #5d9b00;
  }
+
+
+
+
+
+     @media screen and (max-width: 599px) {
+      .payment-modal{
+          width: 75vw;
+      }
+      .hero-image {
+         left: 8rem;
+      }
+    }
